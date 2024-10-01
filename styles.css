@@ -48,12 +48,109 @@ main {
     padding: 20px;
 }
 
+/* Hero Section Styles */
+.hero {
+    background-color: #004080; /* Darker navy blue for contrast */
+    border-radius: 20px; /* Rounded corners for hero section */
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: #FFD700; /* Gold text for hero heading */
+}
+
+.hero p {
+    color: #EAEAEA; /* Light grey text for hero paragraph */
+}
+
+/* Services Section Styles */
+.services {
+    margin-top: 20px;
+}
+
+.service-item {
+   background-color: #3C3C3C; /* Slightly lighter card background */
+   border-radius: 15px; /* Rounded corners for service items */
+   padding: 15px;
+   margin-bottom: 15px; 
+   box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.service-item h3 {
+   color: #FFD700; /* Gold heading for service names */
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+   margin-top: 20px;
+}
+
+.why-choose-us h2 {
+   color: #FFD700; /* Gold heading for "Why Choose Us?" section */
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+   margin-top: 20px;
+   background-color: #3C3C3C; /* Slightly lighter card background for testimonials */
+   border-radius: 15px; /* Rounded corners for testimonials section */
+   padding: 15px;
+}
+
+.testimonials blockquote {
+   font-style: italic;
+   color: #EAEAEA; /* Light grey text for testimonials */
+}
+
+/* Call to Action Section Styles */
+.get-started {
+   margin-top: 20px;
+   text-align: center;
+}
+
+.get-started h2 {
+   color: #FFD700; /* Gold heading for call to action section */
+}
+
+.cta-button {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #FFD700; /* Gold button background */
+   color: #003366; /* Navy blue text for button */
+   border-radius: 10px; /* Rounded corners for button */
+   text-decoration: none;
+}
+
+.cta-button:hover {
+   background-color: #003366; /* Navy blue on hover */
+   color: #FFD700; /* Gold text on hover */
+}
+
+/* Projects Section Styles */
+.projects {
+   margin-top: 20px; 
+}
+
+.project-item {
+   background-color: #2C2C2C; /* Slightly lighter card background for projects */
+   border-radius: 15px; /* Rounded corners for project items */
+   padding: 15px;
+   margin-bottom: 15px; 
+   box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.project-item h3 {
+   color: #FFD700; /* Gold heading for project titles */
+}
+
 /* Biography Section Styles */
 .biography,
 .company-profile,
 .history,
-.leadership {
-   background-color: #2C2C2C; /* Slightly lighter background */
+.leadership,
+.projects {
+   background-color: #2C2C2C; /* Slightly lighter background for sections */
    border-radius: 20px; /* Rounded corners for sections */
    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
    margin-bottom: 20px; 
@@ -63,8 +160,9 @@ main {
 .biography h2,
 .company-profile h2,
 .history h2,
-.leadership h2 {
-   color: #FFD700; /* Gold headings */
+.leadership h2,
+.projects h2 {
+   color: #FFD700; /* Gold headings for all sections */
 }
 
 .biography p,
@@ -73,9 +171,9 @@ main {
 .leadership p,
 .company-profile ul,
 history ul,
-leadership ul {
+leadership ul,
+.projects p {
    line-height: 1.6; /* Improve readability */
-   color: #EAEAEA; /* Light grey text for all other content */
 }
 
 /* Leadership Card Styles */
@@ -96,7 +194,15 @@ leadership ul {
 
 /* Card Image Styles */
 .card-img {
-   width: auto; /* Maintain aspect ratio */
-   height: 150px; /* Set a specific height for Rishi Gandhi's image to reduce size */
-   border-radius: 10px; /* Rounded corners for images */
+   width: auto; /* Maintain aspect ratio of images in cards*/
+   height: 150px; /* Set a specific height for Rishi Gandhi's image to reduce size*/
+   border-radius: 10px; /* Rounded corners for images in cards*/
+}
+
+/* Footer Styles */
+footer {
+   background-color: #003366; /* Navy blue footer */
+   color:#FFD700 ;/* Gold text*/
+text-align:center ;/* Center align footer text*/
+padding :20 px ;/* Padding around footer*/
 }
