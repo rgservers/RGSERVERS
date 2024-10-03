@@ -6,21 +6,25 @@
     <title>RG Group - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="RG Group Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+                <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
             </ul>
         </nav>
-        <img src="logo.png" alt="RG Group Logo" class="logo">
         <h1>Welcome to RG Group</h1>
     </header>
-    
+
     <main>
         <!-- Hero Section -->
         <section class="hero">
@@ -32,15 +36,15 @@
         <section class="services">
             <h2>Our Services</h2>
             <div class="service-item">
-                <h3>Corporate Storage Solutions</h3>
+                <h3><i class="fas fa-server"></i> Corporate Storage Solutions</h3>
                 <p>Customized storage options designed for various business requirements.</p>
             </div>
             <div class="service-item">
-                <h3>Data Management</h3>
+                <h3><i class="fas fa-database"></i> Data Management</h3>
                 <p>Comprehensive services that ensure data integrity, security, and accessibility.</p>
             </div>
             <div class="service-item">
-                <h3>Technical Support</h3>
+                <h3><i class="fas fa-headset"></i> Technical Support</h3>
                 <p>Dedicated support team available to assist clients with their storage needs and technical inquiries.</p>
             </div>
         </section>
@@ -59,7 +63,7 @@
         <section class="testimonials">
             <h2>What Our Clients Say</h2>
             <blockquote>"RG Servers has been instrumental in helping us manage our rapidly growing data storage needs. Their team is responsive, knowledgeable, and always goes the extra mile to ensure our satisfaction."</blockquote>
-            <p>Ashwin Gandhi - Owner of Kohinoor Clothes Store, Ahmednagar</p>
+            <p>- Ashwin Gandhi, Owner of Kohinoor Clothes Store and Mall</p>
         </section>
 
         <!-- Call to Action Section -->
