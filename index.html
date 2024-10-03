@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="logo-container">
                 <img src="logo.png" alt="RG Group Logo" class="logo">
@@ -22,29 +22,31 @@
                 <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
             </ul>
         </nav>
-        <h1>Welcome to RG Group</h1>
+        <div class="hero">
+            <h1>Welcome to RG Group</h1>
+            <h2>Reliable, Scalable Server Storage Solutions for Your Business</h2>
+            <p>RG Servers provides enterprise-grade storage solutions tailored to meet the unique needs of your organization.</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h2>Reliable, Scalable Server Storage Solutions for Your Business</h2>
-            <p>RG Servers provides enterprise-grade storage solutions tailored to meet the unique needs of your organization. With our advanced infrastructure and expert support, you can focus on driving your business forward while we handle your data storage and management.</p>
-        </section>
-
         <!-- Our Services Section -->
-        <section class="services">
+        <section id="services" class="services">
             <h2>Our Services</h2>
             <div class="service-item">
-                <h3><i class="fas fa-server"></i> Corporate Storage Solutions</h3>
+                <img src="service1.jpg" alt="Corporate Storage Solutions" class="service-image">
+                <h3>Corporate Storage Solutions</h3>
                 <p>Customized storage options designed for various business requirements.</p>
             </div>
             <div class="service-item">
-                <h3><i class="fas fa-database"></i> Data Management</h3>
+                <img src="service2.jpg" alt="Data Management" class="service-image">
+                <h3>Data Management</h3>
                 <p>Comprehensive services that ensure data integrity, security, and accessibility.</p>
             </div>
             <div class="service-item">
-                <h3><i class="fas fa-headset"></i> Technical Support</h3>
+                <img src="service3.jpg" alt="Technical Support" class="service-image">
+                <h3>Technical Support</h3>
                 <p>Dedicated support team available to assist clients with their storage needs and technical inquiries.</p>
             </div>
         </section>
@@ -63,7 +65,7 @@
         <section class="testimonials">
             <h2>What Our Clients Say</h2>
             <blockquote>"RG Servers has been instrumental in helping us manage our rapidly growing data storage needs. Their team is responsive, knowledgeable, and always goes the extra mile to ensure our satisfaction."</blockquote>
-            <p>- Ashwin Gandhi, Owner of Kohinoor Clothes Store and Mall</p>
+            <p>- John Doe, CTO at ABC Corporation</p>
         </section>
 
         <!-- Call to Action Section -->
@@ -75,7 +77,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 RG Group. All rights reserved.</p>
     </footer>
 
