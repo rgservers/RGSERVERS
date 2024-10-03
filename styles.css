@@ -12,7 +12,6 @@ header {
     background-color: #0056b3; /* Darker blue header */
     color: #ffffff; /* White text */
     padding: 20px;
-    text-align: center;
 }
 
 .logo {
@@ -22,18 +21,17 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
 }
 
-nav ul {
+.nav-links {
     list-style-type: none;
 }
 
-nav li {
+.nav-links li {
     margin: 0 15px; /* Space between links */
 }
 
-nav a {
+.nav-links a {
     color: #ffffff; /* White links */
     text-decoration: none;
     padding: 10px 15px;
@@ -41,29 +39,34 @@ nav a {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
-nav a:hover {
+.nav-links a:hover {
     background-color: #ffd700; /* Gold background on hover */
-    color: #0056b3; /* Dark blue text on hover */
 }
 
 /* Main Content Styles */
 main {
     max-width: 1200px;
     margin: auto;
-    padding: 20px;
 }
 
 /* Hero Section Styles */
 .hero {
-   background-color: #007bff; /* Bright blue for hero section */
+   background-image: url('hero-background.jpg'); /* Background image for hero section */
+   background-size: cover; /* Cover full area */
    border-radius: 20px; /* Rounded corners for hero section */
-   padding: 20px;
+   padding: 40px;
    text-align: center;
    color: #ffffff; /* White text for hero section */
+   animation: fadeIn 1s ease-in-out; /* Animation effect */
+}
+
+.hero h1 {
+   font-size: 2.5em; /* Larger heading size for emphasis */
+   animation: slideInDown 1s ease-in-out; /* Animation effect */
 }
 
 .hero h2 {
-   font-size: 1.8em; /* Larger heading size for emphasis */
+   font-size: 1.8em; /* Slightly larger subheading size */
 }
 
 .hero p {
@@ -81,6 +84,11 @@ main {
    padding: 15px;
    margin-bottom: 15px; 
    box-shadow: 0 2px 10px rgba(0,0,0,.1); /* Subtle shadow for depth */
+   transition: transform .2s ease-in-out; /* Smooth transition effect on hover */
+}
+
+.service-item:hover {
+   transform: scale(1.05); /* Scale up on hover */
 }
 
 .service-item h3 {
@@ -106,7 +114,6 @@ main {
 
 .testimonials blockquote {
    font-style: italic;
-   color: #333; /* Dark grey text for testimonials */
 }
 
 /* Call to Action Section Styles */
@@ -125,7 +132,7 @@ main {
    background-color: #ffd700; /* Gold button background */
    color: #0056b3; /* Dark blue text for button */
    border-radius: 30px; /* Fully rounded button corners */
-   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+   transition: background-color .3s ease-in-out, color .3s ease-in-out; /* Smooth transition effects on hover */
 }
 
 .cta-button:hover {
@@ -138,20 +145,29 @@ main {
    margin-top: 20px; 
 }
 
+.projects h2 {
+   color:#0056b3 ;/* Dark blue heading for projects section */ 
+}
+
 .project-item {
-   background-color:#ffffff ;/* White card background for projects */  
-border-radius :15 px ;/* Rounded corners for project items */  
+background-color:#ffffff ;/* White card background */  
+border-radius :15 px ;/* Rounded corners */  
 padding :15 px ;  
 margin-bottom :15 px ;  
 box-shadow :0 2 px 10 px rgba(0 ,0 ,0 ,0 .1);  
+transition :transform .2s ease-in-out ;/* Smooth transition effect on hover */  
+}  
+
+.project-item:hover {  
+transform :scale(1 .05) ;/* Scale up on hover */  
 }  
 
 .project-item h3 {  
-color:#0056b3 ;/* Dark blue heading for project titles */  
+color:#0056b3 ;/* Dark blue heading */  
 }  
 
 .project-item p {  
-color:#333 ;/* Dark grey text for project descriptions */  
+color:#333 ;/* Dark grey text */  
 }  
 
 /* Biography Section Styles */  
@@ -195,7 +211,7 @@ margin-bottom :15 px ;
 }  
 
 .card h3 {  
-color :#0056b3 ;/* Dark blue heading for card names */  
+color :#0056b3 ;/* Navy heading for card names */  
 }  
 
 .card p {  
@@ -214,4 +230,16 @@ background-color :#003366 ;/* Navy blue footer */
 color :#FFD700 ;/* Gold text */ 
 text-align:center ;/* Center align footer text */ 
 padding :20 px ;/* Padding around footer */ 
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0;}
+    to { transform: translateY(0); opacity: 1;}
 }
