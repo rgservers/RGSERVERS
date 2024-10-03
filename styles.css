@@ -13,7 +13,6 @@ header {
     color: #FFD700; /* Gold text */
     padding: 20px 0;
     text-align: center;
-    border-radius: 0 0 20px 20px; /* Rounded corners on bottom */
 }
 
 nav ul {
@@ -29,7 +28,6 @@ nav li {
 nav a {
     color: #FFD700; /* Gold links */
     text-decoration: none;
-    font-size: 18px;
 }
 
 nav a:hover {
@@ -50,23 +48,23 @@ main {
 
 /* Hero Section Styles */
 .hero {
-    background-color: #004080; /* Darker navy blue for contrast */
-    border-radius: 20px; /* Rounded corners for hero section */
-    padding: 20px;
-    text-align: center;
+   background-color: #004080; /* Darker navy blue for contrast */
+   border-radius: 20px; /* Rounded corners for hero section */
+   padding: 20px;
+   text-align: center;
 }
 
 .hero h2 {
-    color: #FFD700; /* Gold text for hero heading */
+   color: #FFD700; /* Gold text for hero heading */
 }
 
 .hero p {
-    color: #EAEAEA; /* Light grey text for hero paragraph */
+   color: #EAEAEA; /* Light grey text for hero paragraph */
 }
 
 /* Services Section Styles */
 .services {
-    margin-top: 20px;
+   margin-top: 20px;
 }
 
 .service-item {
@@ -87,7 +85,7 @@ main {
 }
 
 .why-choose-us h2 {
-   color: #FFD700; /* Gold heading for "Why Choose Us?" section */
+   color: #FFD700; /* Gold heading for Why Choose Us? section */
 }
 
 /* Testimonials Section Styles */
@@ -110,7 +108,7 @@ main {
 }
 
 .get-started h2 {
-   color: #FFD700; /* Gold heading for call to action section */
+   color: #FFD700; /* Gold heading for call-to-action section */
 }
 
 .cta-button {
@@ -119,7 +117,6 @@ main {
    background-color: #FFD700; /* Gold button background */
    color: #003366; /* Navy blue text for button */
    border-radius: 10px; /* Rounded corners for button */
-   text-decoration: none;
 }
 
 .cta-button:hover {
@@ -141,7 +138,7 @@ main {
 }
 
 .project-item h3 {
-   color: #FFD700; /* Gold heading for project titles */
+   color:#FFD700 ;/* Gold heading for project titles */  
 }
 
 /* Biography Section Styles */
@@ -150,20 +147,20 @@ main {
 .history,
 .leadership,
 .projects {
-   background-color: #2C2C2C; /* Slightly lighter background for sections */
-   border-radius: 20px; /* Rounded corners for sections */
-   box-shadow: 0 2px 10px rgba(255,255,255,0.1);
-   margin-bottom: 20px; 
-   padding: 20px; 
-}
+   background-color:#2C2C2C ;/* Slightly lighter background for sections */  
+border-radius :20 px ;/* Rounded corners for sections */  
+box-shadow :0 2 px 10 px rgba(255 ,255 ,255 ,0 .1);  
+margin-bottom :20 px ;/* Spacing between sections */  
+padding :20 px ;/* Padding inside sections */  
+}  
 
 .biography h2,
 .company-profile h2,
 .history h2,
 .leadership h2,
-.projects h2 {
-   color: #FFD700; /* Gold headings for all sections */
-}
+.projects h2 {  
+color :#FFD700 ;/* Gold headings */  
+}  
 
 .biography p,
 .company-profile p,
@@ -172,37 +169,32 @@ main {
 .company-profile ul,
 history ul,
 leadership ul,
-.projects p {
-   line-height: 1.6; /* Improve readability */
-}
+.projects p {  
+line-height :1 .6 ;/* Improve readability */  
+}  
 
-/* Leadership Card Styles */
-.card {
-   background-color: #2C2C2C; /* Slightly lighter card background */
-   border-radius: 20px; /* Rounded corners for cards */
-   padding: 15px;
-   margin-bottom: 15px; 
-}
+/* Leadership Card Styles */  
+.card {  
+background-color :#2C2C2C ;/* Slightly lighter card background */  
+border-radius :20 px ;/* Rounded corners for cards */  
+padding :15 px ;  
+margin-bottom :15 px ;  
+}  
 
-.card h3 {
-   color: #FFD700; /* Gold heading for card names */
-}
+.card h3 {  
+color :#FFD700 ;/* Gold heading for card names */  
+}  
 
-.card p {
-   color: #EAEAEA; /* Light grey text for card content */
-}
+.card p {  
+color :#EAEAEA ;/* Light grey text for card content */  
+}  
 
-/* Card Image Styles */
-.card-img {
-   width: auto; /* Maintain aspect ratio of images in cards*/
-   height: 150px; /* Set a specific height for Rishi Gandhi's image to reduce size*/
-   border-radius: 10px; /* Rounded corners for images in cards*/
-}
+/* Card Image Styles */  
+.card-img {  
+width :auto ;/* Maintain aspect ratio of images in cards*/  
+height :150 px ;/* Set a specific height for Rishi Gandhi's image to reduce size*/  
+border-radius :10 px ;/* Rounded corners for images in cards*/  
+}  
 
-/* Footer Styles */
+/* Footer Styles */  
 footer {
-   background-color: #003366; /* Navy blue footer */
-   color:#FFD700 ;/* Gold text*/
-text-align:center ;/* Center align footer text*/
-padding :20 px ;/* Padding around footer*/
-}
