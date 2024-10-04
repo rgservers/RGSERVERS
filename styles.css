@@ -14,17 +14,21 @@ header {
     padding: 20px;
 }
 
+.header-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+}
+
+.logo-container {
+    margin-right: 20px; /* Space between logo and navigation */
+}
+
 .logo {
     height: 80px; /* Logo size */
 }
 
-.logo-container {
-    text-align: center; /* Center logo */
-}
-
 .navbar {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the navigation items */
+    flex-grow: 1; /* Allow navbar to take available space */
 }
 
 .nav-links {
@@ -48,6 +52,7 @@ header {
 .nav-links a:hover {
     background-color: #ffd700; /* Gold background on hover */
 }
+
 /* Main Content Styles */
 main {
     max-width: 1200px;
@@ -68,7 +73,8 @@ main {
 .company-profile,
 .history,
 .leadership,
-.projects {
+.projects,
+.sitemap {
    background-color: #e9ecef; /* Light grey background */
    border-radius: 25px; /* Rounded corners for curvy effect */
    padding: 20px;
@@ -108,6 +114,7 @@ background-color :#003366 ;/* Navy blue footer */
 color :#FFD700 ;/* Gold text */ 
 text-align:center ;/* Center align footer text */ 
 padding :20px ;/* Padding around footer */ 
+width: 100%; /* Ensure full width of footer */
 }
 
 /* Hero Section Styles */
@@ -197,6 +204,5 @@ padding :20px ;/* Padding around footer */
 }
 
 .cta-button:hover {
-   background-color: #0056b3; /* Dark blue on hover */
-   color = #ffd700 ;/* Gold text on hover */ 
+   background-color = #0056b3 ;/* Dark blue on hover */ 
 }
