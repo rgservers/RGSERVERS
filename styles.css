@@ -6,10 +6,6 @@
     --header-text-color: #ffffff; /* White text */
     --footer-background: #003366; /* Navy blue footer */
     --footer-text-color: #FFD700; /* Gold text */
-    --link-color: #ffffff; /* White links */
-    --link-hover-background: #ffd700; /* Gold background on hover */
-    --card-background: #e9ecef; /* Light grey background for cards */
-    --card-text-color: #343A40; /* Dark grey text for card content */
 }
 
 .dark-mode {
@@ -17,8 +13,6 @@
     --text-color: #ffffff; /* White text */
     --header-background: #1e1e1e; /* Darker header background */
     --footer-background: #1e1e1e; /* Dark footer background */
-    --link-color: #ffd700; /* Gold links */
-    --card-background: #2c2c2c; /* Dark grey background for cards */
 }
 
 /* Apply Variables to Body and Other Elements */
@@ -60,7 +54,7 @@ header {
 }
 
 .nav-links a {
-    color: var(--link-color); /* White links in light mode, gold in dark mode */
+    color: var(--header-text-color); /* White links in light mode */
     text-decoration: none;
     padding: 10px 15px; /* Padding around the text */
     border-radius: 30px; /* Fully rounded links */
@@ -68,7 +62,7 @@ header {
 }
 
 .nav-links a:hover {
-    background-color: var(--link-hover-background); /* Gold background on hover */
+    background-color: #ffd700; /* Gold background on hover */
 }
 
 /* Main Content Styles */
@@ -93,71 +87,87 @@ main {
 .leadership,
 .projects,
 .sitemap {
-   background-color: var(--card-background); /* Light grey background in light mode, dark grey in dark mode*/
-   border-radius: 25px; /* Rounded corners for curvy effect */
+   background-color: var(--background-color); 
+   border-radius: 25px; 
    padding: 20px;
    margin-bottom: 20px;
-   box-shadow: 0 4px 20px rgba(0,0,0,.1); /* Subtle shadow for depth */
+   box-shadow: 0 4px 20px rgba(0,0,0,.1); 
+}
+
+/* Founder Section Styles */
+.founder-section {
+   display: flex;
+   align-items: flex-start; /* Align items at the start (top) of the container */
+}
+
+.founder-img {
+   width: 150px; /* Set a fixed width for the founder's image */
+   height: auto; /* Maintain aspect ratio */ 
+   border-radius :10px ;/* Rounded corners for images */ 
+   margin-right: 20px; /* Space between image and biography text */
+}
+
+.founder-bio {
+   flex-grow: 1; /* Allow biography text to take available space next to image */
 }
 
 /* Leadership Card Styles */  
 .card {  
-background-color :var(--card-background);  
+background-color :var(--background-color);  
 color :var(--text-color);  
-border-radius :15px ;/* Rounded corners */  
+border-radius :15px ; 
 padding :15px ;  
 margin-bottom :15px ;  
 box-shadow :0 2px 10px rgba(0 ,0 ,0 ,0 .1);  
 }  
 
 .card h3 {  
-color :#0056b3 ;/* Navy heading for card names */  
+color :#0056b3 ; 
 }  
 
 .card p {  
-color :var(--card-text-color); 
+color :var(--text-color); 
 }  
 
 .card-img {  
-width :150px; /* Set a fixed width for the image */  
-height :auto; /* Maintain aspect ratio */ 
-border-radius :10px ;/* Rounded corners for images */ 
-object-fit :contain ;/* Ensure entire image is visible without distortion */ 
-display: block; /* Make it a block element */ 
-margin: 20px auto; /* Center the image horizontally with margin above and below */ 
+width :150px; 
+height :auto; 
+border-radius :10px ; 
+object-fit :contain ; 
+display: block; 
+margin: 20px auto; 
 }
 
 /* Footer Styles */ 
 footer { 
 background-color :var(--footer-background); 
 color :var(--footer-text-color); 
-text-align:center ;/* Center align footer text */ 
-padding :20px ;/* Padding around footer */ 
-width: 100%; /* Ensure full width of footer */
+text-align:center ; 
+padding :20px ; 
+width: 100%; 
 }
 
 /* Hero Section Styles */
 .hero {
-   background-image: url('hero-background.jpg'); /* Background image for hero section */
-   background-size: cover; /* Cover full area */
-   border-radius: 20px; /* Rounded corners for hero section */
+   background-image: url('hero-background.jpg'); 
+   background-size: cover;
+   border-radius: 20px;
    padding: 40px;
    text-align: center;
-   color: #ffffff; /* White text for hero section */
-   animation: fadeIn 1s ease-in-out; /* Animation effect */
+   color: #ffffff;
+   animation: fadeIn 1s ease-in-out;
 }
 
 .hero h1 {
-   font-size: 2.5em; /* Larger heading size for emphasis */
-   animation: slideInDown 1s ease-in-out; /* Animation effect */
+   font-size: 2.5em;
 }
 
 .hero h2 {
-   font-size: 1.8em; /* Slightly larger subheading size */
+   font-size: 1.8em;
 }
 
 .hero p {
-   margin-top: 10px; /* Space above paragraph */
+   margin-top: 10px;
 }
 
 /* Services Section Styles */
@@ -166,8 +176,8 @@ width: 100%; /* Ensure full width of footer */
 }
 
 .service-item {
-   background-color: var(--card-background); 
-   border-radius: 15px; 
+   background-color: var(--background-color); 
+   border-radius: 15px;
    padding: 15px;
    margin-bottom: 15px;
    box-shadow: 0 2px 10px rgba(0,0,0,.1);
