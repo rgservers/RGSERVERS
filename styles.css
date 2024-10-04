@@ -193,8 +193,11 @@ color :#343A40 ;/* Dark grey text for card content */
 
 /* Footer Styles */ 
 footer { 
-background-color :#003366 ;/* Navy blue footer */ 
-color :#FFD700 ;/* Gold text */ 
-text-align:center ;/* Center align footer text */ 
-padding :20 px ;/* Padding around footer */ 
+    background-color: #003366; /* Navy blue footer */
+    color: #FFD700; /* Gold text */
+    text-align: center; /* Center align footer text */
+    padding: 20px; /* Padding around footer */
+    width: 100%; /* Ensure full width */
+    position: relative; /* Position relative for proper layout */
+    bottom: 0; /* Stick to bottom if needed */
 }
