@@ -11,21 +11,24 @@
 </head>
 <body>
     <header>
-    <div class="header-container">
-        <div class="logo-container">
-            <img src="logo.png" alt="RG Group Logo" class="logo">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="RG Group Logo" class="logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class='fas fa-home'></i> Home</a></li>
+                    <li><a href="about.html"><i class='fas fa-info-circle'></i> About</a></li>
+                    <li><a href="projects.html"><i class='fas fa-briefcase'></i> Projects</a></li>
+                    <li><a href="sitemap.html"><i class='fas fa-sitemap'></i> Sitemap</a></li>
+                </ul>
+                <button id='theme-toggle'>Toggle Dark Mode</button> <!-- Button for dark mode toggle -->
+            </nav>
         </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li><!-- Sitemap link -->
-            </ul>
-        </nav>
-        <h1 class="fade-in">About RG Group</h1>
+        <h1 class='fade-in'>About RG Group</h1> <!-- Main heading -->
     </header>
 
+    <!-- Main Content -->
     <main>
 
         <!-- Company Profile Section -->
@@ -59,15 +62,9 @@
 
         </section>
 
-        <!-- History Section -->
-        <section class="history fade-in">
-            <h2><i class="fas fa-history"></i> Our History</h2>
-            <p>RG Group was founded in 2018 with the aim of providing effective data storage solutions. Over the years, we have grown to become a trusted partner for businesses across various industries.</p>
-        </section>
-
         <!-- Leadership Team Section -->
         <section class="leadership fade-in">
-            <h2><i class="fas fa-users"></i> Leadership Team</h2>
+            <h2><i class='fas fa-users'></i> Leadership Team</h2>
 
             <!-- Leadership Card -->
             <div class="card">
@@ -88,6 +85,8 @@
         <p>&copy; 2024 RG Group. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript for Dark Mode Toggle -->
     <script src="script.js"></script>
+
 </body>
 </html>
