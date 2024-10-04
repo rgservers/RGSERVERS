@@ -5,82 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RG Group - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-   <header>
-    <div class="header-container">
-        <div class="logo-container">
-            <img src="logo.png" alt="RG Group Logo" class="logo">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="RG Group Logo" class="logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class='fas fa-home'></i> Home</a></li>
+                    <li><a href="about.html"><i class='fas fa-info-circle'></i> About</a></li>
+                    <li><a href="projects.html"><i class='fas fa-briefcase'></i> Projects</a></li>
+                    <li><a href="sitemap.html"><i class='fas fa-sitemap'></i> Sitemap</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li><!-- Sitemap link -->
-            </ul>
-        </nav>
-    </div>
-        <div class="hero">
-            <h1>Welcome to RG Group</h1>
-            <h2>Reliable, Scalable Server Storage Solutions for Your Business</h2>
-            <p>RG Servers provides enterprise-grade storage solutions tailored to meet the unique needs of your organization.</p>
-            <a href="#services" class="cta-button">Learn More</a>
-        </div>
+        <h1 class='fade-in'>Welcome to RG Group</h1>
     </header>
 
     <main>
-        <!-- Our Services Section -->
-        <section id="services" class="services">
-            <h2><i class="fas fa-cogs"></i> Our Services</h2>
-            <div class="service-item">
-                <h3><i class="fas fa-server"></i> Corporate Storage Solutions</h3>
-                <p>Customized storage options designed for various business requirements.</p>
-            </div>
-            <div class="service-item">
-                <h3><i class="fas fa-database"></i> Data Management</h3>
-                <p>Comprehensive services that ensure data integrity, security, and accessibility.</p>
-            </div>
-            <div class="service-item">
-                <h3><i class="fas fa-headset"></i> Technical Support</h3>
-                <p>Dedicated support team available to assist clients with their storage needs and technical inquiries.</p>
-            </div>
+        <!-- Main content for the home page goes here -->
+        <section class="hero">
+            <h2>Your Reliable Storage Solutions Partner</h2>
+            <p>We offer scalable and secure storage solutions tailored to your business needs.</p>
+            <a href="#services" class="cta-button">Learn More</a>
         </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="why-choose-us">
-            <h2><i class="fas fa-check-circle"></i> Why Choose RG Servers?</h2>
-            <ul>
-                <li><strong>Scalability:</strong> Flexible storage solutions that can grow with your business.</li>
-                <li><strong>Reliability:</strong> High uptime and performance standards to ensure uninterrupted access to data.</li>
-                <li><strong>Customer-Centric Approach:</strong> Focused on understanding client needs to provide tailored solutions.</li>
-            </ul>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h2><i class="fas fa-comments"></i> What Our Clients Say</h2>
-            <blockquote>"RG Servers has been instrumental in helping us manage our rapidly growing data storage needs. Their team is responsive, knowledgeable, and always goes the extra mile to ensure our satisfaction."</blockquote>
-            <p>- Ashwin Gandhi, Kohinoor Clothes store and Kohinoor Mall, Ahmednagar</p>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="get-started">
-            <h2><i class="fas fa-paper-plane"></i> Get Started Today</h2>
-            <p>Contact us to learn more about our server storage solutions and how we can help your business thrive.</p>
-            <a href="contact.html" class="cta-button">Contact Us</a><!-- Link to contact page -->
-        </section>
-
+        <!-- Additional sections can be added here -->
     </main>
 
-    <footer class="footer">
+    <footer>
         <p>&copy; 2024 RG Group. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 </html>
