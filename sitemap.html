@@ -1,48 +1,55 @@
-<!DOCTYPE html >
-<html lang = "en" >
-<head >
-    <
-meta charset = "UTF-8" >
-    <
-meta name = "viewport" content = "width=device-width, initial-scale=1.0" >
-<title>Sitemap - RG Group</title >
-<link rel = "stylesheet" href = "styles.css" >
-<link href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel = "stylesheet"> <!-- Google Font -->
-</head >
-<body >
-<header >
-<nav >
-<ul >
-<li >< a href = "index.html ">Home< /a ></ li >
-<li >< a href = "about.html ">About< /a ></ li >
-<li >< a href = "projects.html ">Projects< /a ></ li > <!-- Projects link -->
-<li >< a href ="#contact ">Contact Us< /a ></ li > <!-- Add Contact page if applicable -->
-<!-- Add more navigation links as needed -->
-</ ul >
-</ nav >
-<img src = "logo.png " alt = "RG Group Logo " class = "logo ">
-<h1>Sitemap<h1 />
-   </ header >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - RG Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+<header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="RG Group Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+                <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+            </ul>
+        </nav>
+        <h1 class="fade-in">Sitemap</h1>
+    </header>
 
-< main >
+    <main>
+        <section class="sitemap fade-in">
+            <h2>Website Structure</h2>
+            <ul>
+                <li><strong><a href="index.html">Home</a></strong></li>
+                <li><strong><a href="about.html">About Us</a></strong></li>
+                <li><strong><a href="projects.html">Projects</a></strong></li>
+                <li><strong><a href="#">Services</a></strong>
+                    <ul>
+                        <li><a href="#">Corporate Storage Solutions</a></li>
+                        <li><a href="#">Data Management</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                    </ul>
+                </li>
+                <li><strong><a href="#">Contact Us</a></strong></li> <!-- Add contact page link if available -->
+            </ul>
+        </section>
 
-<section class = "sitemap ">
-<h2 > Website Structure<h2 />
-<ul >
-<li >< a href ="index.html ">Home< /a ></ li >
-<li >< a href ="about.html ">About Us< /a ></ li >
-<li >< a href ="projects.html ">Projects< /a ></ li >
-<li >< a href ="contact.html ">Contact Us< /a ></ li > <!-- Add Contact page if applicable -->
+    </main>
 
-<!-- Add more navigation links as needed -->
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 RG Group. All rights reserved.</p>
+    </footer>
 
-<ul />
-<section />
-
-<footer />
-<p>&copy; 2024 RG Group. All rights reserved.< /footer />
-
-<script src ="script.js"></script />
-
-<body />
-<html />
+    <script src="script.js"></script>
+</body>
+</html>
