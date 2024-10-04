@@ -9,7 +9,6 @@
     --card-background: #1e1e1e; /* Dark grey background for cards */
 }
 
-/* Apply Variables to Body and Other Elements */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
