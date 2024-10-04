@@ -235,3 +235,28 @@ width: 100%;
 .cta-button:hover {
    background-color:#0056b3 ; 
 }
+
+.theme-toggle {
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    color: var(--header-text-color); /* Use header text color */
+    font-size: 24px; /* Font size for icons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling effect and color change */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center icons vertically */
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode .theme-toggle .fa-sun {
+    display: none; /* Hide sun icon in dark mode */
+}
+
+.dark-mode .theme-toggle .fa-moon {
+    display: inline; /* Show moon icon in dark mode */
+}
+
