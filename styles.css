@@ -23,12 +23,14 @@ header {
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the navigation items */
 }
 
 .nav-links {
-    list-style-type: none;
+    display: flex; /* Ensure the list is displayed as a flex container */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
 }
 
 .nav-links li {
@@ -46,7 +48,6 @@ header {
 .nav-links a:hover {
     background-color: #ffd700; /* Gold background on hover */
 }
-
 /* Main Content Styles */
 main {
     max-width: 1200px;
