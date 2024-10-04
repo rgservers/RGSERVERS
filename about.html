@@ -10,26 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <div class="logo-container">
-            <img src="logo.png" alt="RG Group Logo" class="logo">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="RG Group Logo" class="logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class='fas fa-home'></i> Home</a></li>
+                    <li><a href="about.html"><i class='fas fa-info-circle'></i> About</a></li>
+                    <li><a href="projects.html"><i class='fas fa-briefcase'></i> Projects</a></li>
+                    <li><a href="sitemap.html"><i class='fas fa-sitemap'></i> Sitemap</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html"><i class='fas fa-home'></i> Home</a></li>
-                <li><a href="about.html"><i class='fas fa-info-circle'></i> About</a></li>
-                <li><a href="projects.html"><i class='fas fa-briefcase'></i> Projects</a></li>
-                <li><a href="sitemap.html"><i class='fas fa-sitemap'></i> Sitemap</a></li>
-            </ul>
-            <button id='theme-toggle' class="theme-toggle">
-                <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
-                <i class="fas fa-moon" style="display: none;"></i> <!-- Moon icon for dark mode -->
-            </button>
-        </nav>
-    </div>
-    <h1 class='fade-in'>About RG Group</h1> <!-- Main heading -->
-</header>    <!-- Main Content -->
+        <h1 class='fade-in'>About RG Group</h1> <!-- Main heading -->
+    </header>
+
+    <!-- Main Content -->
     <main>
 
         <!-- Company Profile Section -->
@@ -40,7 +38,14 @@
             <p>RG Servers is a premier provider of storage solutions for corporate clients, established in 2018 by Rishi Gandhi. Based in India, our company specializes in delivering reliable and scalable server storage options tailored to meet the diverse needs of businesses across various industries.</p>
 
             <h3><i class="fas fa-user-tie"></i> Our Founder</h3>
-            <p>Rishi Gandhi, the Founder-Chairman of RG Servers, was born in Ahmednagar, India, and is currently a student at Good Shepherd International School in Ooty. With a strong passion for technology and entrepreneurship, Rishi founded RG Servers to address the growing demand for effective data storage solutions. His vision for the company emphasizes innovation, customer satisfaction, and excellence in service delivery.</p>
+
+            <!-- Founder Image and Biography Section -->
+            <div class="founder-section">
+                <img src="rishi-gandhi.jpg" alt="Rishi Gandhi" class="founder-img"> <!-- Founder photo -->
+                <div class="founder-bio">
+                    <p>Rishi Gandhi, the Founder-Chairman of RG Servers, was born in Ahmednagar, India, and is currently a student at Good Shepherd International School in Ooty. With a strong passion for technology and entrepreneurship, Rishi founded RG Servers to address the growing demand for effective data storage solutions. His vision for the company emphasizes innovation, customer satisfaction, and excellence in service delivery.</p>
+                </div>
+            </div>
 
             <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
             <p>At RG Servers, our mission is to empower organizations with high-quality storage solutions that enhance operational efficiency and data management capabilities. We strive to provide our clients with the tools they need to succeed in an increasingly data-driven world.</p>
@@ -86,8 +91,8 @@
         <p>&copy; 2024 RG Group. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dark Mode Toggle -->
-    <script src="script.js"></script>
+    <!-- JavaScript for Dark Mode Toggle (not needed anymore) -->
+    <!-- Remove this script if you are not using dark mode -->
 
 </body>
 </html>
