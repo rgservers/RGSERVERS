@@ -128,6 +128,7 @@ border-radius :10px ;
 object-fit :contain ; 
 display: block; 
 margin: 20px auto; 
+object-position: 5px 10%;
 }
 
 /* Footer Styles */ 
