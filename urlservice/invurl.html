@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invalid Shortlink | Shortlink Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2c3e50;
+    }
+    .wrapper {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 1s ease;
+    }
+    .icon {
+      font-size: 80px;
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 64px;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-btn {
+      background-color: transparent;
+      border: 2px solid #3498db;
+      color: #3498db;
+    }
+    .contact-btn:hover {
+      background-color: #3498db;
+      color: white;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="icon"><i class="fas fa-link-slash"></i></div>
+    <h1>Invalid</h1>
+    <h2>That shortlink doesn’t lead anywhere</h2>
+    <p><i class="fas fa-exclamation-triangle"></i> It might be broken, expired, or mistyped.</p>
+    <div class="buttons">
+      <a href="mailto:info@rgserver.in" class="contact-btn"><i class="fas fa-envelope"></i>Contact Support</a>
+    </div>
+    <div class="footer">
+      <i class="fas fa-code"></i> Powered by RG Servers
+    </div>
+  </div>
+</body>
+</html>
