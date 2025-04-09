@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to RG Servers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2c3e50;
+    }
+
+    .wrapper {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #34495e;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: transparent;
+      border: 2px solid #3498db;
+      color: #3498db;
+    }
+
+    .buttons a:hover {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Welcome Message First -->
+    <h1>Welcome to RG Servers</h1>
+
+    <!-- Logo Below -->
+    <img src="rg-logo.png" alt="RG Servers Logo" class="logo">
+
+    <!-- Contact Button -->
+    <div class="buttons">
+      <a href="mailto:info@rgserver.in"><i class="fas fa-envelope"></i>Contact Support</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <i class="fas fa-code"></i> Powered by RG Servers
+    </div>
+  </div>
+
+</body>
+</html>
