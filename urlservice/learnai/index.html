@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Workshop by Rishi Gandhi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .wrapper {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin: 20px auto;
+    }
+
+    .event-details {
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .event-details p {
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: transparent;
+      border: 2px solid #3498db;
+      color: #3498db;
+    }
+
+    .buttons a:hover {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+      .tagline { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Welcome to the AI Workshop by Rishi Gandhi</h1>
+    <div class="tagline">Hands-On AI Learning Experience</div>
+
+    <!-- Optional Logo -->
+    <img src="/logo.png" alt="RG Servers Logo" class="logo">
+
+    <!-- Event Details -->
+    <div class="event-details">
+      <p><strong>Date:</strong> Saturday, 12th April 2025</p>
+      <p><strong>Time:</strong> 11:00 AM – 1:00 PM</p>
+      <p><strong>Venue:</strong> Warton Hall</p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <a href="proposal.pdf" download><i class="fas fa-file-alt"></i>Download Plan</a>
+      <a href="https://learnai.rgserver.in/RecommendedAI"><i class="fas fa-list-check"></i>Recomended AIs</a>
+      <a href="mailto:info@learnai.rgserver.in"><i class="fas fa-envelope"></i>Contact Us</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <i class="fas fa-robot"></i> Powered by RG Servers | © 2025
+    </div>
+  </div>
+
+</body>
+</html>
