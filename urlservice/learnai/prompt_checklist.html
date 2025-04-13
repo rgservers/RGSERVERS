@@ -50,21 +50,27 @@
     }
 
     .checklist li {
-      background-color: #f9f9f9;
-      border-left: 5px solid #3498db;
-      margin-bottom: 15px;
-      padding: 15px 20px;
-      border-radius: 10px;
-      font-size: 16px;
-      line-height: 1.6;
       display: flex;
       align-items: flex-start;
       gap: 10px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.6;
+      transition: background-color 0.3s ease;
     }
 
     .checklist input[type="checkbox"] {
       margin-top: 5px;
       flex-shrink: 0;
+    }
+
+    .checklist li.checked {
+      background-color: #d4edda;
+      border-left-color: #27ae60;
     }
 
     .footer {
@@ -91,27 +97,34 @@
     <div class="tagline">Use this checklist to write clear and effective prompts for AI tasks</div>
 
     <ul class="checklist">
-      <li><input type="checkbox"> <span><strong>1. Who are you?</strong><br>Clearly introduce yourself and your role or context.<br><em>e.g., "I am a Grade 9 student working on a science project."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>1. Who are you?</strong><br>Clearly introduce yourself and your role or context.<br><em>e.g., "I am a Grade 9 student working on a science project."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>2. Who is the AI?</strong><br>Tell the AI what role it should take.<br><em>e.g., "You are my assistant who helps explain concepts clearly."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>2. Who is the AI?</strong><br>Tell the AI what role it should take.<br><em>e.g., "You are my assistant who helps explain concepts clearly."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>3. What tone or style should the AI use?</strong><br>Choose how the AI should sound (friendly, formal, fun, academic, poetic, etc).<br><em>e.g., "Use a friendly and encouraging tone."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>3. What tone or style should the AI use?</strong><br>Choose how the AI should sound.<br><em>e.g., "Use a friendly and encouraging tone."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>4. What do you want the AI to do?</strong><br>Be specific about the task.<br><em>e.g., "Write a short summary of the French Revolution in 100 words."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>4. What do you want the AI to do?</strong><br>Be specific about the task.<br><em>e.g., "Write a short summary of the French Revolution in 100 words."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>5. What format should the answer be in?</strong><br>Choose how you want the answer to look (list, paragraph, table, script, code, etc).<br><em>e.g., "Give the answer as a bullet-point list."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>5. What format should the answer be in?</strong><br>Choose how you want the answer to look.<br><em>e.g., "Give the answer as a bullet-point list."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>6. Any special instructions or rules?</strong><br>Mention age group, word count, things to include or avoid.<br><em>e.g., "Use simple language for 10-year-olds. Avoid complicated words."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>6. Any special instructions or rules?</strong><br>Mention age group, word count, things to include or avoid.<br><em>e.g., "Use simple language for 10-year-olds. Avoid complicated words."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>7. Mention the response length</strong><br>Tell it how long it should be.<br><em>e.g., "Your response should include a 150 word paragraph and at least 7 pointers."</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>7. Mention the response length</strong><br>Tell it how long it should be.<br><em>e.g., "Your response should include a 150 word paragraph and at least 7 pointers."</em></span></li>
 
-      <li><input type="checkbox"> <span><strong>8. (Optional) Add an example</strong><br>Show what you want by giving a sample or mini example.<br><em>e.g., "Here’s the kind of explanation I like: ‘Imagine you’re a caterpillar...’"</em></span></li>
+      <li><input type="checkbox" onchange="toggleChecked(this)"> <span><strong>8. (Optional) Add an example</strong><br>Show what you want by giving a sample or mini example.<br><em>e.g., "Here’s the kind of explanation I like: ‘Imagine you’re a caterpillar...’"</em></span></li>
     </ul>
 
     <div class="footer">
       <i class="fas fa-robot"></i> Powered by RG Servers | © 2025
     </div>
   </div>
+
+  <script>
+    function toggleChecked(checkbox) {
+      const listItem = checkbox.closest('li');
+      listItem.classList.toggle('checked', checkbox.checked);
+    }
+  </script>
 
 </body>
 </html>
