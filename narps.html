@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARPS: The Interactive Business Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Neon Chaos (Inspired by the packaging: electric purple, lime green, hot pink, fiery orange on a dark charcoal background) -->
+    <!-- Application Structure Plan: A single-page, thematic scrolling experience designed to feel like an interactive brand deck. It flows from the brand's identity ('The Vibe'), to its products ('The Flavors'), its audience ('The Squad'), its strategy ('The Hype'), and its goals ('The Numbers'). This structure is more engaging and narrative-driven than a standard report, making it perfect for the Gen-Z-focused NARPS brand and easier for a potential investor to digest. -->
+    <!-- Visualization & Content Choices:
+        - Target Demographic: Doughnut Chart (Chart.js) to clearly show the primary vs. secondary audience split. Goal: Inform. Justification: Visually simple and effective for proportions.
+        - Phased Rollout: Interactive Timeline (HTML/CSS/JS) to organize complex information sequentially. Goal: Organize. Justification: Allows users to explore the 3-phase plan at their own pace.
+        - Financial Objectives: Animated Counters (JS) to make key numbers feel dynamic and impactful. Goal: Engage/Inform. Justification: More exciting than static text, draws attention to key metrics.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        .brand-gradient-text {
+            background: linear-gradient(90deg, #f87171, #fb923c, #a3e635, #4ade80, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .doodle-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/chaos.png');
+            opacity: 0.05;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #fb923c;
+            transform: translateY(-2px);
+        }
+        .flavor-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .flavor-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(251, 146, 60, 0.5);
+        }
+        .timeline-item.active .timeline-dot {
+            background-color: #fb923c;
+            transform: scale(1.5);
+        }
+        .timeline-item.active .timeline-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-content {
+            opacity: 0.5;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-black brand-gradient-text">NARPS</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#the-vibe" class="nav-link text-sm font-bold uppercase tracking-wider">The Vibe</a>
+                <a href="#the-flavors" class="nav-link text-sm font-bold uppercase tracking-wider">The Flavors</a>
+                <a href="#the-squad" class="nav-link text-sm font-bold uppercase tracking-wider">The Squad</a>
+                <a href="#the-hype" class="nav-link text-sm font-bold uppercase tracking-wider">The Hype</a>
+                <a href="#the-numbers" class="nav-link text-sm font-bold uppercase tracking-wider">The Numbers</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 doodle-bg"></div>
+            <div class="z-10 px-6">
+                <h2 class="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none">
+                    <span class="brand-gradient-text">Taste</span>
+                    <span class="block">The</span>
+                    <span class="brand-gradient-text">Noise.</span>
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
+                    An interactive overview of the snack brand poised to disrupt the Indian market. Scroll to unbox the chaos.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Vibe Section -->
+        <section id="the-vibe" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-black text-center mb-16">The Vibe: <span class="brand-gradient-text">Our Mission</span></h3>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <p class="text-lg text-gray-300">Our mission is to create the most exciting and flavorful snack experience in India, where every pack is a celebration of chaotic creativity, bold taste, and unapologetic individuality. We're not just a snack; we're a statement.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <h4 class="text-3xl font-bold mb-4">Unforgettable <span class="text-orange-400">Taste</span></h4>
+                        <p class="text-gray-300">We take authentic Indian flavors, remix them, and intensify them for a modern palate. This isn't your parent's popcorn. It's a flavor explosion designed to be as bold as you are.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <h4 class="text-3xl font-bold mb-4">Unmatched <span class="text-purple-400">Aesthetics</span></h4>
+                        <p class="text-gray-300">Our "doodle-bomb" packaging is vibrant, chaotic, and inherently shareable. It's designed to be a piece of social currency, turning the product itself into a statement of identity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Flavors Section -->
+        <section id="the-flavors" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-black text-center mb-16">The Flavors: <span class="brand-gradient-text">Our Launch Lineup</span></h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Flavor Cards will be injected here by JS -->
+                </div>
+                <!-- Flavor Modal -->
+                <div id="flavorModal" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-6 z-50 hidden">
+                    <div id="modalContent" class="bg-gray-800 rounded-2xl max-w-lg w-full p-8 relative transform transition-all duration-300 scale-95 opacity-0">
+                        <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
+                        <h4 id="modalTitle" class="text-3xl font-black mb-4 brand-gradient-text"></h4>
+                        <p id="modalDescription" class="text-gray-300 mb-4"></p>
+                        <p id="modalPrice" class="text-2xl font-bold text-white"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Squad Section -->
+        <section id="the-squad" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-black text-center mb-16">The Squad: <span class="brand-gradient-text">Our Target Market</span></h3>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-3xl font-bold mb-4">Demographic Breakdown</h4>
+                        <p class="text-gray-300 mb-8">Our strategy targets the digitally native Gen-Z as the primary consumer, with millennials and discerning parents as a strong secondary market. This chart shows the focus of our marketing efforts.</p>
+                        <div class="bg-gray-800 p-4 rounded-2xl">
+                           <div class="chart-container">
+                               <canvas id="demographicsChart"></canvas>
+                           </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold mb-4">Market Opportunity</h4>
+                        <p class="text-gray-300">The Indian snack market is vast but dominated by legacy brands. There's a clear, underserved niche for a youth-focused, premium brand that combines cultural relevance with modern aesthetics. NARPS is designed to fill this gap and master this space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Hype Section -->
+        <section id="the-hype" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-black text-center mb-16">The Hype: <span class="brand-gradient-text">Our Go-To-Market Plan</span></h3>
+                <div class="max-w-4xl mx-auto">
+                    <!-- Interactive Timeline -->
+                    <div class="relative">
+                        <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gray-700 rounded-full"></div>
+                        <div id="timeline" class="space-y-16">
+                            <!-- Timeline items will be injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Numbers Section -->
+        <section id="the-numbers" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl md:text-5xl font-black mb-16">The Numbers: <span class="brand-gradient-text">Our Financial Goals</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <p class="text-lg text-gray-400 mb-2">Target Units Sold (Q1)</p>
+                        <p id="unitsSold" class="text-6xl font-black text-orange-400">0</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <p class="text-lg text-gray-400 mb-2">Time to Break-Even</p>
+                        <p class="text-6xl font-black text-purple-400"><span id="breakEven">0</span> <span class="text-3xl">Months</span></p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl">
+                        <p class="text-lg text-gray-400 mb-2">Marketing Reinvestment</p>
+                        <p class="text-6xl font-black text-green-400">100<span class="text-3xl">%</span></p>
+                        <p class="text-sm text-gray-500">(of initial profits)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p class="text-2xl font-black brand-gradient-text mb-2">NARPS</p>
+            <p>&copy; 2025. Taste the Noise.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for the application
+            const appData = {
+                flavors: [
+                    { name: 'Street Side Story', description: 'A complex and tangy flavor profile inspired by the multi-layered taste of classic Indian chaat.', price: '₹125', color: 'pink-500' },
+                    { name: 'Smoky Glow Up', description: 'A bold and savory flavor with the deep, smoky notes of tandoori tikka masala.', price: '₹135', color: 'orange-500' },
+                    { name: 'Indori Rush', description: 'A unique and exciting flavor featuring the legendary 28-spice Jiravan masala from Indore.', price: '₹130', color: 'blue-500' },
+                    { name: 'Noodle Dood', description: 'A nostalgic and universally loved flavor that perfectly captures the savory magic of instant noodle seasoning.', price: '₹120', color: 'red-500' }
+                ],
+                timeline: [
+                    { phase: 'Phase 1: Launch', duration: '0-6 Months', title: 'Digital-First D2C Launch', description: 'Launch via Instagram Shop and a mobile-first website. Focus on hyper-local delivery to build a strong initial following and create exclusivity.' },
+                    { phase: 'Phase 2: Expansion', duration: '6-12 Months', title: 'Experiential Retail', description: 'Expand into the physical world with pop-up shops at college fests and flea markets. Forge strategic partnerships with trendy, youth-focused cafes.' },
+                    { phase: 'Phase 3: Scale', duration: '12-18 Months', title: 'Nationwide Commerce', description: 'Enter the quick commerce space with listings on Blinkit, Zepto, etc. Secure placement in premium grocery chains like Nature\'s Basket and Foodhall.' }
+                ],
+                financials: {
+                    unitsSold: 5000,
+                    breakEven: 6
+                }
+            };
+
+            // Populate Flavors
+            const flavorsContainer = document.querySelector('#the-flavors .grid');
+            appData.flavors.forEach(flavor => {
+                const card = document.createElement('div');
+                card.className = `flavor-card bg-gray-800 p-6 rounded-2xl text-center border-2 border-transparent hover:border-${flavor.color}`;
+                card.innerHTML = `
+                    <div class="w-16 h-16 bg-${flavor.color} rounded-full mx-auto mb-4"></div>
+                    <h4 class="text-xl font-bold mb-2">${flavor.name}</h4>
+                    <p class="text-sm text-gray-400">Click to learn more</p>
+                `;
+                card.addEventListener('click', () => openModal(flavor));
+                flavorsContainer.appendChild(card);
+            });
+
+            // Flavor Modal Logic
+            const modal = document.getElementById('flavorModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeModalBtn = document.getElementById('closeModal');
+
+            function openModal(flavor) {
+                document.getElementById('modalTitle').textContent = flavor.name;
+                document.getElementById('modalDescription').textContent = flavor.description;
+                document.getElementById('modalPrice').textContent = flavor.price;
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Demographics Chart
+            const ctx = document.getElementById('demographicsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Primary: Gen-Z (15-24)', 'Secondary: Millennials & Parents'],
+                    datasets: [{
+                        label: 'Target Audience Focus',
+                        data: [70, 30],
+                        backgroundColor: ['#fb923c', '#a78bfa'],
+                        borderColor: '#1f2937',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#d1d5db',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+           
+            // Populate Timeline
+            const timelineContainer = document.getElementById('timeline');
+            appData.timeline.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = `timeline-item relative ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'} md:w-1/2`;
+                itemDiv.innerHTML = `
+                    <div class="timeline-dot absolute left-1/2 -translate-x-1/2 mt-2 w-4 h-4 bg-gray-600 rounded-full transition-all duration-300"></div>
+                    <div class="timeline-content bg-gray-800 p-6 rounded-2xl">
+                        <span class="text-sm font-bold text-orange-400">${item.phase} (${item.duration})</span>
+                        <h4 class="text-xl font-bold mt-1 mb-2">${item.title}</h4>
+                        <p class="text-gray-400 text-sm">${item.description}</p>
+                    </div>
+                `;
+                timelineContainer.appendChild(itemDiv);
+            });
+
+            // Interactive Timeline Logic
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.6 };
+
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        timelineItems.forEach(item => item.classList.remove('active'));
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            timelineItems.forEach(item => timelineObserver.observe(item));
+            if (timelineItems.length > 0) timelineItems[0].classList.add('active');
+
+
+            // Financial Numbers Animation
+            const numbersSection = document.getElementById('the-numbers');
+            const unitsSoldEl = document.getElementById('unitsSold');
+            const breakEvenEl = document.getElementById('breakEven');
+
+            const countUp = (el, endValue, duration = 2000) => {
+                let start = 0;
+                const stepTime = Math.abs(Math.floor(duration / endValue));
+                const timer = setInterval(() => {
+                    start += 1;
+                    el.textContent = start;
+                    if (start === endValue) {
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            };
+
+            const numberObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    countUp(unitsSoldEl, appData.financials.unitsSold);
+                    countUp(breakEvenEl, appData.financials.breakEven);
+                    numberObserver.unobserve(numbersSection);
+                }
+            }, { threshold: 0.5 });
+           
+            numberObserver.observe(numbersSection);
+        });
+    </script>
+</body>
+</html>
